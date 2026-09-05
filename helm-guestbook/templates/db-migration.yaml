@@ -1,5 +1,5 @@
 apiVersion: batch/v1
-kind: job
+kind: Job
 metadata:
   name: db-migration-job
   annotations:
@@ -9,7 +9,7 @@ spec:
   backoffLimit: 2
   template:
     spec:
-      restartPolicy: Never 
+      restartPolicy: Never
       containers:
         - name: migration
           image: busybox
